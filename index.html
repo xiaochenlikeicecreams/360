@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.fullPage.min.js"></script>
+		<link rel="stylesheet" href="css/reset.css" />
+		<link type="text/css"  href="css/index.css" rel="stylesheet"/>
+	</head>
+	<body>
+		<article id="fullPage">
+			<!--第一屏-->
+			<article class="section first">
+				<img src="img/logo.png" />
+				<section class="text">
+					<img src="img/text_1.png" />
+					<img src="img/text_2.png" />
+					<img src="img/text_3.png" />
+					<img src="img/text_4.png" />
+					<img src="img/text_5.png" />
+					<img src="img/text_6.png" />
+					<img src="img/text_7.png" />
+					<img src="img/text_8.png" />
+				</section>
+				<img src="img/info_1.png" />
+			</article>
+			<!--第2屏-->
+			<article class="section second">
+				<section class="shield">
+					<img src="img/shield_1.png" />
+					<img src="img/shield_2.png" />
+					<img src="img/shield_3.png" />
+					<img src="img/shield_4.png" />
+					<img src="img/shield_5.png" />
+					<img src="img/shield_6.png" />
+					<img src="img/shield_7.png" />
+					<img src="img/shield_8.png" />
+					<img src="img/shield_9.png" />
+				</section>
+				<img src="img/info_2.png" />
+			</article>
+			<!--第3屏-->
+			<article class="section third">
+				<img src="img/info_3.png" />
+				<section class="third_box">
+					<img class="circle" src="img/circle.png" />
+					<img class="rocket" src="img/rocket.png" />
+				</section>
+			</article>
+			<!--第4屏-->
+			<article class="section fourth">
+				<section class="seach_box">
+					<img class="search" src="img/search.png" />
+					<section class="key"></section>
+					<section class="result" ></section>
+				</section>
+				<img src="img/info_4.png" />
+			</article>
+			<!--第5屏-->
+			<article class="section fifth">
+				<img src="img/info_5.png" />
+				<footer class="footer">
+					<img src="img/toolbar.png" />
+					<img class="extra" src="img/extra.png" />
+					<div class="topborder"></div>
+					<div class="bottomborder"></div>
+					<div class="leftborder"></div>
+					<div class="rightborder"></div>
+					<div class="centerborder"></div>
+					<div class="nav"></div>
+				</footer>
+			</article>
+		</article>
+	</body>
+	<script>
+		$(function(){
+			$("#fullPage").fullpage({
+				sectionsColor:["#0da5d6","#2ab660","#de8a10","#16bb9d","#0da5d6"],
+				afterLoad:function(a,idx){
+					$(".section").removeClass("start");
+					setTimeout(function(){
+						$(".section").eq(idx-1).addClass("start");
+					},100)
+				}
+			})
+		})
+	</script>
+</html>

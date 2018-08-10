@@ -1,0 +1,273 @@
+/*第一屏*/
+.section{
+	overflow: hidden;
+}
+.first img{
+	display: block;
+	margin: 70px auto 0;
+}
+.text{
+	text-align: center;
+}
+.text img{
+	display: inline-block;
+	margin: 70px 24px 0px;
+	opacity: 0;
+}
+/*第一屏动画*/
+.section.start .text img{
+	margin: 70px 0px 0px;
+	opacity: 1;
+	transition: all 2s linear;
+}
+
+/*第二屏内容*/
+.second{
+	padding: 0 100px;
+}
+.second>div{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.shield{
+	width: 430px;
+	font-size: 0px;
+}
+.shield img:nth-child(1){
+	transform: translate(100px,200px) rotate(40deg) skew(20deg,20deg);
+}
+.shield img:nth-child(2){
+	transform: translate(100px,300px) rotate(40deg) skew(20deg,20deg);
+}
+.shield img:nth-child(3){
+	transform: translate(100px,400px) rotate(40deg) skew(20deg,20deg);
+}
+.shield img:nth-child(4){
+	transform: translate(100px,500px) rotate(40deg) skew(20deg,20deg);
+}
+.shield img:nth-child(5){
+	transform: translate(100px,600px) rotate(40deg) skew(20deg,20deg);
+}
+.shield img:nth-child(6){
+	transform: translate(100px,700px) rotate(40deg) skew(20deg,20deg);
+}
+.shield img:nth-child(7){
+	transform: translate(100px,800px) rotate(40deg) skew(20deg,20deg);
+}
+.shield img:nth-child(8){
+	transform: translate(100px,900px) rotate(40deg) skew(20deg,20deg);
+}
+.shield img:nth-child(9){
+	transform: translate(100px,300px) rotate(40deg) skew(20deg,20deg);
+}
+/*第二屏动画*/
+.second.start .shield img{
+	transform: translate(0px,0px) rotate(0deg) skew(0deg,0deg);
+	transition: all 2s;
+}
+/*第三屏内容*/
+.third>div{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.third{
+	padding: 0 100px;
+}
+.third_box{
+	position: relative;
+}
+.third_box .rocket{
+	position: absolute;
+	top: 122.5px;
+	left: 125px;
+	transform: translate(-400px,700px) rotate(-45deg);
+}
+
+/*360旋转*/
+@keyframes rotat{
+	from{
+		transform: rotate(0deg);
+	}
+	to{
+		transform: rotate(360deg);
+	}
+}
+/*第三屏动画*/
+.section.start .rocket{
+	animation: rock 3s ease-in-out forwards;
+}
+.section.start .circle{
+	animation: rotat 4s linear infinite;
+}
+@keyframes rock{
+	0%{
+		transform: translate(-400px,700px) rotate(-45deg);
+	}
+	50%{
+		transform: translate(-400px,0px) rotate(-45deg);
+	}
+	70%{
+		transform: translate(-400px,0px) rotate(45deg);
+	}
+	100%{
+		transform: translate(0px,0px) rotate(45deg);
+	}
+}
+/*第四屏内容*/
+.fourth>div{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.fourth{
+	padding: 0px 80px;
+}
+.seach_box{
+	width: 529px;
+	height: 438px;
+	overflow: hidden;
+	position: relative;
+}
+.search{
+	transform: translateX(-529px);
+}
+.key{
+	width: 0px;
+	height: 22px;
+	background: url(../img/key.png) no-repeat;
+	position: absolute;
+	top: 22px;
+	left: 20px;
+	
+}
+@keyframes keytext{
+	0%{width: 20px;}
+	25%{width: 40px;}
+	50%{width: 60px;}
+	75%{width: 78px;}
+	100%{width: 99px;}
+}
+.result{
+	width: 529px;
+	height: 0px;
+	position: absolute;
+	top: 53px;
+	background: url(../img/result.png) no-repeat;
+}
+/*第四屏动画*/
+.section.start .search{
+	transform: translateX(0px);
+	transition: all 2s;
+}
+.section.start .key{
+	animation: keytext 2s step-end 2s forwards;
+}
+.section.start .result{
+	height: 372px;
+	transition: all 2s 5s;
+}
+/*第五屏内容*/
+.fifth{
+	position: relative;
+}
+.fifth>div>img{
+	display: block;
+	margin: 40px auto 0px;
+}
+.footer{
+	width: 1004px;
+	height: 440px;
+	background: rgba(255, 255, 255, 0.15);
+	position: absolute;
+	bottom: 0px;
+	left: 50%;
+	margin-left: -502px;
+}
+.topborder{
+	width: 100%;
+	height: 1px;
+	background: rgba(255,255,255,0.5);
+	position: absolute;
+	top: 0px;
+	left: 200%;	
+}
+.centerborder{
+	width: 100%;
+	height: 1px;
+	background: rgba(255,255,255,0.5);
+	position: absolute;
+	top: 410px;
+	left: -200%;	
+}
+.bottomborder{
+	width: 100%;
+	height: 1px;
+	background: rgba(255,255,255,0.5);
+	position: absolute;
+	top: 439px;
+	left: 200%;	
+}
+.leftborder{
+	width: 1px;
+	height: 100%;
+	background: rgba(255,255,255,0.5);
+	position: absolute;
+	top: -200%;
+	left: 0px;	
+}
+.rightborder{
+	width: 1px;
+	height: 100%;
+	background: rgba(255,255,255,0.5);
+	position: absolute;
+	top: 200%;
+	left: 100%;	
+}
+.nav{
+	width: 0px;
+	height: 29px;
+	border: solid 0px rgba(255,255,255,0.5);
+	position: absolute;
+	top: 30px;
+	left: 72px;
+}
+.footer img{
+	opacity: 0;
+}
+.extra{
+	position: absolute;
+	bottom: 0px;
+	right: 4px;
+}
+/*第五屏动画*/
+.section.start .topborder{
+	left: 0;
+	transition: all 2s;
+}
+.section.start .centerborder{
+	left: 0;
+	transition: all 2s;
+}
+.section.start .bottomborder{
+	left: 0;
+	transition: all 2s;
+}
+.section.start .leftborder{
+	top: 0;
+	transition: all 2s;
+}
+.section.start .rightborder{
+	top: 0;
+	transition: all 2s;
+}
+.section.start .nav{
+	width: 922px;
+	transition: all 2s 2s;
+	border: solid 1px rgba(255,255,255,0.5);
+}
+.section.start .footer img{
+	opacity: 1;
+	transition: all 1s 4s;
+}

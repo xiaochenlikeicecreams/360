@@ -1,0 +1,37 @@
+/*公共样式--开始*/
+html, body, div, ul, li, h1, h2, h3, h4, h5, h6, p, dl, dt, dd, ol, form, input, textarea, th, td, select {
+    margin: 0;
+    padding: 0;
+}
+*{box-sizing: border-box;}
+html, body {
+    min-height: 100%;
+}
+body {
+    font-family: "Microsoft YaHei";
+    font-size:16px;
+    color:#333;
+}
+/*h1, h2, h3, h4, h5, h6{font-weight:normal;}*/
+ul,ol {
+    list-style: none;
+}
+
+
+img {
+    border: none;
+    vertical-align: middle;
+}
+　　article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section,summary { 
+　　　　display: block; 
+　　} 
+　　audio, canvas, progress, video { 
+　　　　display: inline-block; 
+　　} 
+　　audio:not([controls]) { 
+　　　　display: none;
+　　　　height: 0; 
+　　} 
+　　progress { 
+　　　　vertical-align: baseline; 
+　　} 
